@@ -11,18 +11,10 @@ channel = 0
 gain = 1
 ps = Py7Seg() 
 t = 0
-mq2 = 0
 
 voltVector = [] # Vector of read voltages
 
-
-def signal_handler(signal, frame):
-    print 'You pressed Ctrl+C!'
-    sys.exit(0)
 signal.signal(signal.SIGINT, signal_handler)
-#print 'Press Ctrl+C to exit'
-
-
 
 ADS1015 = 0x00 # 12-bit ADC
 ADS1115 = 0x01 # 16-bit ADC
