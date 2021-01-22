@@ -13,10 +13,6 @@ channel = 0
 #for i in range(n):
 #   channel.append([])
 
-gain = 1
-ps = Py7Seg() 
-t = 0
-
 voltVector = [] # Vector of read voltages
 
 signal.signal(signal.SIGINT, signal_handler)
