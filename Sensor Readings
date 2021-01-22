@@ -1,5 +1,4 @@
-from time import sleep
-import random
+import time
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pand
@@ -7,10 +6,10 @@ import math
 from ADS1x15 import ADS1015
 from py7seg import Py7Seg
 
-adc = ADS1015()
+adc = ADS1115()
 channel = 0
 gain = 1
-ps = Py7Seg() # xxx
+ps = Py7Seg() 
 t = 0
 mq2 = 0
 
