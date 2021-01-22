@@ -6,6 +6,18 @@ import math
 from Adafruit_ADS1x15 import ADS1x15
 from py7seg import Py7Seg
 
+adc = ADS1115()
+channel = 0
+
+#for n sensors
+#channel = []
+#for i in range(n):
+#   channel.append([])
+
+gain = 1
+ps = Py7Seg() 
+t = 0
+
 voltVector = [] # Vector of read voltages
 
 signal.signal(signal.SIGINT, signal_handler)
@@ -35,14 +47,20 @@ sps = 250 # 250 samples per second
 adc = ADS1x15(ic=ADS1115)
 adc2 = ADS1x15(ic=ADS1115, address=0x49)
 adc3 = ADS1x15(ic=ADS1115, address=0x4a)
-channel = 0
-t = 0
 
 while (True):
     voltVector = []
-    # MQ-3
+    # MQ-2
     volts = adc.readADCSingleEnded(0, gain, sps) / 1000
-    print "MQ-3 %.6fv" % (volts)
+    # print "MQ-2 %.6fv" % (volts)
     voltVector.append(volts)
+
+#for n inputs
+#while (True):
+#    voltVector = []
+#    for i in range(n):
+#       voltVector.append([])
+#       volts = adc.readADCSingleEnded(i, gain, sps) / 1000
+#       voltVector[i].append(volts)
     
 print(voltVector)
