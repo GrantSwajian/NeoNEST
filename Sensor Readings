@@ -40,9 +40,9 @@ t = 0
 
 while (True):
     voltVector = []
-    # MQ-2
+    # MQ-3
     volts = adc.readADCSingleEnded(0, gain, sps) / 1000
-    print "MQ-2 %.6fv" % (volts)
+    print "MQ-3 %.6fv" % (volts)
     voltVector.append(volts)
     
 print(voltVector)
