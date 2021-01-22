@@ -17,8 +17,6 @@ channel = 0
 
 voltVector = [] # Vector of read voltages
 
-signal.signal(signal.SIGINT, signal_handler)
-
 # Select the gain
 # gain = 6144 # +/- 6.144V
 gain = 4096 # +/- 4.096V
