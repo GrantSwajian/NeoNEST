@@ -5,6 +5,9 @@ import pandas as pand
 import math
 from Adafruit_ADS1x15 import ADS1x15
 
+ADS1015 = 0x00 # 12-bit ADC
+ADS1115 = 0x01 # 16-bit ADC
+
 adc = ADS1x15(ic=ADS1115)
 channel = 0
 
@@ -16,9 +19,6 @@ channel = 0
 voltVector = [] # Vector of read voltages
 
 signal.signal(signal.SIGINT, signal_handler)
-
-ADS1015 = 0x00 # 12-bit ADC
-ADS1115 = 0x01 # 16-bit ADC
 
 # Select the gain
 # gain = 6144 # +/- 6.144V
