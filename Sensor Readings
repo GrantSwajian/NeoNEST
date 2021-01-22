@@ -15,14 +15,6 @@ mq2 = 0
 
 voltVector = [] # Vector of read voltages
 
-#########################
-# Classes and Methods
-#########################
-
-
-#########################
-# Functions
-#########################
 
 def signal_handler(signal, frame):
     print 'You pressed Ctrl+C!'
@@ -30,9 +22,7 @@ def signal_handler(signal, frame):
 signal.signal(signal.SIGINT, signal_handler)
 #print 'Press Ctrl+C to exit'
 
-#########################
-# Main
-#########################
+
 
 ADS1015 = 0x00 # 12-bit ADC
 ADS1115 = 0x01 # 16-bit ADC
