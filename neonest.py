@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 print("Hello World")
-a,b,c,d,e,f = GetData(25, 6)
+a,b,c,d,e,f = GetData(160, 6)
 mq135average = Average(a)
 mq2average = Average(b)
 mq3average = Average(c)
@@ -17,12 +17,13 @@ sleep(1)
 
 xpoints = np.array ([0,12])
 ypoints = np.array([0,200])
-plt.plot(a,marker = '*')
-plt.plot(b,marker = '*')
-plt.plot(c,marker = '*')
-plt.plot(d,marker = '*')
-plt.plot(e,marker = '*')
-plt.plot(f,marker = '*')
+plt.plot(a,marker = '*', color = "blue")
+plt.plot(b,marker = '*', color = "green")
+plt.plot(c,marker = '*', color = "red")
+plt.plot(d,marker = '*', color = "brown")
+plt.plot(e,marker = '*', color = "orange")
+plt.plot(f,marker = '*', color = "purple")
+
 plt.show()
 sleep(10)
  

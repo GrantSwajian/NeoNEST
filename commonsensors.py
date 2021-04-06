@@ -1,7 +1,6 @@
 import serial
 from time import sleep
 ser = serial.Serial('COM5')
-ser.flushInput()
 import numpy as np
 from statistics import mean
 
@@ -9,6 +8,7 @@ def Average(lst):
     return mean(lst)
 
 def GetData(samples, sensors):
+    ser.flushInput()
     total_samples = (samples-1)*(sensors-1)
     current_sample = 0
     sample_iteration = 0
@@ -56,4 +56,4 @@ def GetData(samples, sensors):
             sleep(0.1)
     f.close()
     return mq135, mq2, mq3, mq4, mq5, mq7
-    print("done")
+    
