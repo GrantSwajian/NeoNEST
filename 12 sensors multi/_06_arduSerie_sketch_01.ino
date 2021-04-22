@@ -33,7 +33,8 @@ void loop ()
       vals[i] = readSensor(i);
     }
     else{
-      vals[i] = analogRead(i);
+      rs = i-7
+      vals[rs] = analogRead(i);
     }
      Serial.println(vals[i]);
   }
